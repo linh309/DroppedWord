@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropped Words</title>
+    <link href="~/Content/drop.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="modalUser" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="control">
+                <div class="left">
+                    <span>Enter your name: </span>
+                </div>
+                <div class="right">
+                    <input type="text" id="txtUserName">
+                    <span id="warning">Please enter your name</span>
+                </div>
+            </div>
+            <div class="modal-button-container">
+                <button class="btn btn-save" id="btnSave">
+                    <span>Save</span>
+                </button>
+                <button class="btn btn-cancel" id="btnCancel">
+                    <span>Cancel</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="left-side">
+            <div class="button-container">
+                <button class="btn btn-start" id="btnStart"><span>START</span></button>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-stop" id="btnStop"><span>STOP</span></button>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-replay" id="btnReplay"><span>REPLAY</span></button>
+            </div>
+
+        </div>
+
+        <div class="middle-side">
+            <div class="drop-container">
+                <div class="time-wrap">
+                    <span id="showTime">00:00</span>
+                </div>
+                <div class="words-wrap">
+                    <div id="wordsContainer" class="words-container">
+                    </div>
+                </div>
+                <div class="line-wrap">
+                    <div id="lineContainer" class="line-container">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="user-list">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>User Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/app")
+    @*<script src="~/Scripts/Utils.js"></script>
+        <script src="~/Scripts/CoordinateUtil.js"></script>
+        <script src="~/Scripts/element.js"></script>
+        <script src="~/Scripts/DroppedWord.js"></script>
+        <script src="~/Scripts/LineWord.js"></script>
+        <script src="~/Scripts/app.js"></script>*@
+</body>
+</html>
